@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="product_characteristic_tree" model="ir.ui.view">
+        <field name="name">product.characteristic.tree</field>
+        <field name="model">product.characteristic</field>
+        <field name="arch" type="xml">
+            <tree string="Caracteristicas" editable="bottom">
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_product_characteristics" model="ir.actions.act_window">
+        <field name="name">Caracteristicas</field>
+        <field name="res_model">product.characteristic</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_product_characteristics"
+            name="Caracteristicas"
+	    parent="stock.menu_stock_inventory_control"
+	    action="action_product_characteristics"
+            sequence="100"
+            />
+
+</odoo>

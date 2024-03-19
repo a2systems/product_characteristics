@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="chaacteritic_product_search" model="ir.ui.view">
+        <field name="name">characteristic.product.search.form</field>
+	<field name="model">product.template</field>
+	<field name="inherit_id" ref="product.product_template_search_view" ></field>
+	<field name="arch" type="xml">
+		<field name="categ_id" position="after">
+			<field name="characteristic_ids" />
+		</field>
+        </field>
+    </record>
+
+
+
+    <record id="chaacteritic_product_form" model="ir.ui.view">
+        <field name="name">characteristic.product.form</field>
+	<field name="model">product.template</field>
+	<field name="inherit_id" ref="product.product_template_form_view" ></field>
+	<field name="arch" type="xml">
+		<field name="product_tag_ids" position="after">
+			<field name="characteristic_ids" widget="many2many_tags" />
+		</field>
+        </field>
+    </record>
+
+</odoo>
