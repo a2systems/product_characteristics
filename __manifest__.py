@@ -9,8 +9,6 @@
         Product Characteristics
     """,
 
-    'author': "InfotecLaPlata",
-
     'category': 'Sales',
     'version': '0.1',
 
